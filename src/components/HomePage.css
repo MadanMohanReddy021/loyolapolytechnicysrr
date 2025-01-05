@@ -1,0 +1,67 @@
+
+  .hero {
+    background-color: #000dff;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+  
+  .about {
+    padding: 30px;
+    background-color: #f4f4f974;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    color: #0036e6;
+  }
+  
+  .vision-mission {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .vision, .mission {
+    width: 45%;
+  }
+  
+  .vision h3, .mission h3 {
+    font-size: 1.5rem;
+    color: #0036e6;
+  }
+  
+  .courses {
+    background-color: #ffffff5e;
+    padding: 30px;
+  }
+  
+  .courses h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #0036e6;
+  }
+  
+  .course-list {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .course-item ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .course-item li {
+    margin: 10px 0;
+  }
+  

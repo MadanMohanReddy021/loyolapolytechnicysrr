@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function rr(){
+        fetch('https://sbtet.ap.gov.in/APSBTET/results.xls', {
+            method: 'POST', // method type (GET, POST, PUT, DELETE, etc.)
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              aadhar1: '22029-cm-021',
+              grade2: '4SEM'
+            }), // body data (in this case, sending JSON)
+          })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+        }
+        rr();
+    </script>
+</body>
+</html>

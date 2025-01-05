@@ -1,0 +1,24 @@
+.blinking-icon {
+    font-size: 1rem;
+    color: #ff6347;  /* Tomato color */
+    animation: blink 1s infinite;  /* Animation to blink */
+  }
+  
+  @keyframes blink {
+    0% {
+     color:#ff6347
+    }
+    25% {
+      color:rgb(255, 0, 162);
+    }
+    50% {
+        color:rgb(221, 0, 255);
+      }
+      75% {
+        color:rgb(51, 255, 0);
+      }
+    100% {
+      color:yellow;
+    }
+  }
+ 

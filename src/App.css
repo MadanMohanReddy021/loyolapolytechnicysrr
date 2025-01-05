@@ -1,0 +1,73 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Overall Page Layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Header Styling */
+.header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Main Container with Sidebar and Main Content */
+.container {
+  display: flex;
+  min-height: 100vh; /* Ensures the layout takes the full height */
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  height: 100%;
+  flex-shrink: 0; /* Prevent sidebar from shrinking */
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Styling */
+.main-content {
+  flex-grow: 1; /* Allows main content to take the remaining space */
+  padding: 20px;
+  background-color: white;
+}
+
+/* Footer Styling (optional) */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto; /* Ensures footer stays at the bottom of the page */
+}

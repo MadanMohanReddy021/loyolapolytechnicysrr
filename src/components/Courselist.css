@@ -1,0 +1,16 @@
+/* Custom styles, you can add more or modify these as per your needs */
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .container
+  {
+display:flex;
+flex-direction: row;
+  }
+  

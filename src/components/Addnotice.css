@@ -1,0 +1,83 @@
+/* Container for the form */
+.addnotice-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Style */
+  .addnotice-container h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form styling */
+  .addnotice-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .addnotice-container form div {
+    margin-bottom: 15px;
+  }
+  
+  .addnotice-container label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .addnotice-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+  }
+  
+  .addnotice-container input[type="text"]:focus {
+    border-color: #007bff;
+  }
+  
+  .addnotice-container button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .addnotice-container button:disabled {
+    background-color: #ccc;
+  }
+  
+  .addnotice-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Success and Error message styles */
+  .addnotice-container p {
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .addnotice-container p.success {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .addnotice-container p.error {
+    color: red;
+    font-weight: bold;
+  }
+  

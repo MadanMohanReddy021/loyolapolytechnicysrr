@@ -1,0 +1,10 @@
+.MainContent
+{
+    width: 100%;
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    transition: 0.3s;
+    position: fixed;
+    top:20%;
+}
