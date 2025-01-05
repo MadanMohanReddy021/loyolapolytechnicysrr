@@ -11,7 +11,7 @@ const Notifications = () => {
     // Fetch notifications from the API
     const fetchNotifications = async () => {
       try {
-        const response = await fetch('https://warp-dusty-jingle.glitch.me/api/notifications');
+        const response = await fetch('https://backend-upqj.onrender.com/notifications');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }
