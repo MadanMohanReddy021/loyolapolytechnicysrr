@@ -6,7 +6,7 @@ const DisplayData = () => {
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [downloads,setDownload]=([]);
+  
 
   // Fetch data from the API on component mount
   useEffect(() => {
