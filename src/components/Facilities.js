@@ -3,19 +3,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // Updated to have an array of objects containing both image path and text for each image
 const imageList = [
-  { src: "auditorium.jpg", text: "Auditorium" },
-  { src: "BOYSHOSTEL.jpg", text: "Hostel for Boys" },
+  { src: "auditorium.jpg", text: "auditorium" },
+  { src: "BOYSHOSTEL.jpg", text: "BOYSHOSTEL" },
   { src: "cf1.jpg", text: "computer Fundamental Lab" },
   { src: "chemistry2.jpg", text: "Chemistry Lab" },
   { src: "physics1.jpg", text: "Physics Lab" },
-  { src: "seminar hall.jpg", text: "Seminar Hall" },
+  { src: "seminar hall.jpg", text: "seminar Hall" },
   { src: "gym.jpg", text: "Gym" },
   { src: "library2.jpg", text: "Library" },
   { src: "cmLAB.jpg", text: "Computer Main Lab" },
   { src: "be-cf.jpg", text: "EC lab" },
   { src: "wiring.jpg", text: "Wiring Lab" },
   { src: "survey.jpg", text: "Survey Lab" },
-  { src: "workshop.jpg", text: "Workshop" },
+  { src: "workshop.jpg", text: "workshop" },
   { src: "miningLAB.jpg", text: "Mining Lab" },
 ];
 
