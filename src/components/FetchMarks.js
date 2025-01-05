@@ -36,7 +36,7 @@ const FetchMarks = () => {
 
     try {
       
-      const response = await fetch("https://warp-dusty-jingle.glitch.me/api/marks", {
+      const response = await fetch("https://backend-upqj.onrender.com/api/marks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
