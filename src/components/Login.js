@@ -16,7 +16,7 @@ const LoginForm = () => {
 
     try {
       // Send login request to the backend
-      const response = await axios.post('https://warp-dusty-jingle.glitch.me/api/login', {
+      const response = await axios.post('https://backend-upqj.onrender.com/api/login', {
         username,
         password,
       });
