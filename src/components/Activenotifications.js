@@ -7,7 +7,7 @@ const Activenotifications = () => {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const response = await axios.get('https://warp-dusty-jingle.glitch.me/api/notifications');
+        const response = await axios.get('https://backend-upqj.onrender.com/api/notifications');
         setNotifications(response.data);
         console.log(response.data);
       } catch (error) {
@@ -20,7 +20,7 @@ const Activenotifications = () => {
 
   const deleteNotification = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/notifications/${id}`);
+      await axios.delete(`https://backend-upqj.onrender.com/api/notifications/${id}`);
       setNotifications(notifications.filter(notification => notification.id !== id));
     } catch (error) {
       console.error('Error deleting notification:', error);
