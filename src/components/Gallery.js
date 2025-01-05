@@ -8,7 +8,7 @@ const DisplayAllImages = () => {
     // Fetch all images from the backend
     const fetchImages = async () => {
       try {
-        const response = await axios.get('https://warp-dusty-jingle.glitch.me/images');
+        const response = await axios.get('https://backend-upqj.onrender.com/images');
         setImages(response.data);
       } catch (error) {
         console.error('Error fetching images:', error);
