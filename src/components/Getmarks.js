@@ -12,7 +12,7 @@ const DisplayData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://warp-dusty-jingle.glitch.me/api/students');
+        const response = await fetch('https://backend-upqj.onrender.com/api/students');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }
