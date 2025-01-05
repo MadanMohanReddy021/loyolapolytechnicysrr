@@ -32,7 +32,7 @@ const Uploadimages = () => {
 
     try {
       // Send the image and caption to the backend
-      const response = await axios.post('https://warp-dusty-jingle.glitch.me/api/upload', formData, {
+      const response = await axios.post('https://backend-upqj.onrender.com/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
