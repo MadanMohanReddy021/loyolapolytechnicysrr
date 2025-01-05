@@ -16,7 +16,7 @@ const Addnotice = () => {
 
     try {
      
-      const response = await fetch('https://warp-dusty-jingle.glitch.me/api/insert-row', {
+      const response = await fetch('https://backend-upqj.onrender.com/api/insert-row', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
