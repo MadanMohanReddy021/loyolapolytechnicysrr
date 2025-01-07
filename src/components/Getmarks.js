@@ -6,13 +6,13 @@ const DisplayData = () => {
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  
+  const [downloads,setDownload]=([]);
 
   // Fetch data from the API on component mount
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://backend-upqj.onrender.com/api/students');
+        const response = await fetch(https://backend-upqj.onrender.com/api/students');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }
