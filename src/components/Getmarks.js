@@ -61,7 +61,7 @@ const DataTable = () => {
               <td>{item.semester}</td>
               <td>
     {item.marks
-      .filter(mark => mark.subcode !== "Grand Total" && mark.subcode !== "Result" && mark.subcode !== "Month &amp Year" && mark.subcode)
+      .filter(mark => mark.subcode !== "Grand Total" && mark.subcode !== "Result" && mark.subcode !== "Month &amp; Year" && mark.subcode)
       .map((mark, markIndex) => (
         <div key={markIndex}>
           <strong>{mark.subcode}:</strong> {mark.marks.join(", ")}
