@@ -1,65 +1,52 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-const MarksTable = () => {
-  const [data, setData] = useState([]); // State to store parsed data
-  const [loading, setLoading] = useState(true); // To handle loading state
-  const [error, setError] = useState(null); // To handle errors
+const DataTable = () => {
+  // Step 1: Initialize state to store fetched data
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
+  // Step 2: Fetch data from backend (assuming an API endpoint exists)
   useEffect(() => {
+    // Replace with the URL of your API endpoint
     const fetchData = async () => {
       try {
-        const response = await fetch("https://backend-upqj.onrender.com/api/students"); // Replace with your actual API URL
+        const response = await fetch('https://backend-upqj.onrender.com/api/students'); // Example URL
         if (!response.ok) {
-          throw new Error("Failed to fetch data");
+          throw new Error('Data fetch failed');
         }
-
         const result = await response.json();
-
-        // Clean and parse marks data, and filter out the "Result" subcode
-        const cleanedData = result.map((item) => {
-          let marks = item.marks ? item.marks : [];
-
-          // If marks are a string, parse them
-          if (typeof marks === 'string') {
-            marks = JSON.parse(marks.replace(/""/g, '"')); // Handle the double-quote issue
-          }
-
-          // Filter out the "Result" and "Month & Year" subcodes in the marks array
-          const filteredMarks = marks.filter(mark => mark.subcode !== "Result" && mark.subcode !== "Month & Year");
-          
-          return {
-            ...item,
-            marks: filteredMarks,
-          };
-        });
-
-        setData(cleanedData);
-        setLoading(false);
+        setData(result); // Set data to state
       } catch (error) {
-        setError(error.message);
-        setLoading(false);
+        setError(error.message); // Handle error if fetching fails
+      } finally {
+        setLoading(false); // Stop loading when the request is complete
       }
     };
 
     fetchData();
-  }, []); // Empty dependency array to fetch data only on component mount
+  }, []); // Empty dependency array means this runs once when the component mounts
 
-  // Handling loading and error states
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  // Step 3: Render the table
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <div>
-      <h2>Student Marks</h2>
-      <table>
+      <h1>Data Table</h1>
+      <table border="1">
         <thead>
           <tr>
-            <th>Pinnumber</th>
-            <th>Name</th>
-            <th>Branch</th>
-            <th>Semester</th>
-            <th>Subcode</th>
-            <th>Marks</th>
+            <th>PIN.NO</th>
+            <th>NAME</th>
+            <th>BRANCH</th>
+            <th>SEM</th>
+            <th>MARKS</th>
           </tr>
         </thead>
         <tbody>
@@ -70,17 +57,48 @@ const MarksTable = () => {
               <td>{item.branch}</td>
               <td>{item.semester}</td>
               <td>
-                {item.marks.map((mark, markIndex) => (
-                  <div key={markIndex}>
-                    {/* Check if the mark contains HTML and render it safely */}
-                    {mark.marks.some(m => m.includes('<center>')) ? (
-                      <div dangerouslySetInnerHTML={{ __html: mark.marks.join(", ") }} />
-                    ) : (
-                      mark.marks.join(", ")
-                    )}
-                  </div>
-                ))}
-              </td>
+    {item.marks
+      .filter(mark => mark.subcode !== "Grand Total" && mark.subcode !== "Result" && mark.subcode !== "Month & Year" && !mark.subcode)
+      .map((mark, markIndex) => (
+        <div key={markIndex}>
+          <strong>{mark.subcode}:</strong> {mark.marks.join(", ")}
+        </div>
+      ))}
+  </td>
+
+  {/* Grand Total */}
+  <td>
+    {item.marks
+      .filter(mark => mark.subcode === "Grand Total")
+      .map((mark, markIndex) => (
+        <div key={markIndex}>
+          <strong>{mark.subcode}:</strong> {mark.marks.join(", ")}
+        </div>
+      ))}
+  </td>
+
+  {/* Result */}
+  <td>
+    {item.marks
+      .filter(mark => mark.subcode === "Result")
+      .map((mark, markIndex) => (
+        <div key={markIndex}>
+          <strong>{mark.subcode}:</strong> {mark.marks.join(", ")}
+        </div>
+      ))}
+  </td>
+
+  {/* Month & Year */}
+  <td>
+    {item.marks
+      .filter(mark => mark.subcode === "Month & Year")
+      .map((mark, markIndex) => (
+        <div key={markIndex}>
+          <strong>{mark.subcode}:</strong> {mark.marks.join(", ")}
+        </div>
+      ))}
+  </td>
+
             </tr>
           ))}
         </tbody>
@@ -89,4 +107,4 @@ const MarksTable = () => {
   );
 };
 
-export default MarksTable;
+export default DataTable;
