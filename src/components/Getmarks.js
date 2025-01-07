@@ -8,7 +8,7 @@ const MarksTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/students"); // Replace with your actual API URL
+        const response = await fetch("https://backend-upqj.onrender.com/api/students"); // Replace with your actual API URL
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
