@@ -47,6 +47,9 @@ const DataTable = () => {
             <th>BRANCH</th>
             <th>SEM</th>
             <th>MARKS</th>
+            <th>Grand Total</th>
+             <th>Result</th>
+            <th>Month &amp Year</th>
           </tr>
         </thead>
         <tbody>
@@ -58,7 +61,7 @@ const DataTable = () => {
               <td>{item.semester}</td>
               <td>
     {item.marks
-      .filter(mark => mark.subcode !== "Grand Total" && mark.subcode !== "Result" && mark.subcode !== "Month & Year" && !mark.subcode)
+      .filter(mark => mark.subcode !== "Grand Total" && mark.subcode !== "Result" && mark.subcode !== "Month & Year" && mark.subcode)
       .map((mark, markIndex) => (
         <div key={markIndex}>
           <strong>{mark.subcode}:</strong> {mark.marks.join(", ")}
@@ -72,7 +75,7 @@ const DataTable = () => {
       .filter(mark => mark.subcode === "Grand Total")
       .map((mark, markIndex) => (
         <div key={markIndex}>
-          <strong>{mark.subcode}:</strong> {mark.marks.join(", ")}
+           {mark.marks.join(", ")}
         </div>
       ))}
   </td>
@@ -83,7 +86,7 @@ const DataTable = () => {
       .filter(mark => mark.subcode === "Result")
       .map((mark, markIndex) => (
         <div key={markIndex}>
-          <strong>{mark.subcode}:</strong> {mark.marks.join(", ")}
+         {mark.marks.join(", ")}
         </div>
       ))}
   </td>
@@ -94,7 +97,7 @@ const DataTable = () => {
       .filter(mark => mark.subcode === "Month & Year")
       .map((mark, markIndex) => (
         <div key={markIndex}>
-          <strong>{mark.subcode}:</strong> {mark.marks.join(", ")}
+         {mark.marks.join(", ")}
         </div>
       ))}
   </td>
