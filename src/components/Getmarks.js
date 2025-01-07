@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import './getmarks.css';
 const DataTable = () => {
   // Step 1: Initialize state to store fetched data
   const [data, setData] = useState([]);
