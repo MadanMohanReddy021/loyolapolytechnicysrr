@@ -5,18 +5,35 @@ const Uploadimages = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [caption, setCaption] = useState('');
   const [imageUrl, setImageUrl] = useState('');
+  const [uploading, setUploading] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [error, setError] = useState('');
 
+  // Handle image selection and validation
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
+      // Validate file type
+      if (!file.type.startsWith('image/')) {
+        setError('Please select a valid image file.');
+        return;
+      }
+      // Validate file size (e.g., max 5MB)
+      if (file.size > 5 * 1024 * 1024) {
+        setError('File size exceeds 5MB.');
+        return;
+      }
+      setError('');
       setSelectedImage(file);
     }
   };
 
+  // Handle caption change
   const handleCaptionChange = (e) => {
     setCaption(e.target.value);
   };
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -31,18 +48,25 @@ const Uploadimages = () => {
     formData.append('caption', caption);
 
     try {
-      // Send the image and caption to the backend
+      setUploading(true);
+      setProgress(0);
+      setError('');
+      
       const response = await axios.post('https://backend-upqj.onrender.com/api/upload', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
+        headers: { 'Content-Type': 'multipart/form-data' },
+        onUploadProgress: (progressEvent) => {
+          const { loaded, total } = progressEvent;
+          setProgress(Math.round((loaded / total) * 100));
+        }
       });
 
       alert('Image and text uploaded successfully!');
-      setImageUrl(response.data.imageUrl); 
-    } catch (error) {
-      console.error('Error uploading image and caption:', error);
-      alert('Error uploading image and caption!');
+      setImageUrl(response.data.imageUrl);
+    } catch (err) {
+      console.error('Error uploading image and caption:', err);
+      setError('Error uploading image and caption!');
+    } finally {
+      setUploading(false);
     }
   };
 
@@ -58,6 +82,7 @@ const Uploadimages = () => {
             className="form-control"
             onChange={handleImageChange}
           />
+          {error && <div className="text-danger mt-2">{error}</div>}
         </div>
 
         <div className="mb-3">
@@ -72,8 +97,26 @@ const Uploadimages = () => {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary w-100">Upload</button>
+        <button type="submit" className="btn btn-primary w-100" disabled={uploading}>
+          {uploading ? 'Uploading...' : 'Upload'}
+        </button>
       </form>
+
+      {uploading && (
+        <div className="mt-3">
+          <div className="progress">
+            <div
+              className="progress-bar"
+              role="progressbar"
+              style={{ width: `${progress}%` }}
+              aria-valuenow={progress}
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <div className="text-center mt-2">{progress}%</div>
+        </div>
+      )}
 
       {imageUrl && (
         <div className="mt-4 text-center">
