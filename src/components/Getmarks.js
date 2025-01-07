@@ -17,9 +17,16 @@ const MarksTable = () => {
 
         // Clean and parse marks data, and filter out the "Result" subcode
         const cleanedData = result.map((item) => {
-          const marks = item.marks ? JSON.parse(item.marks.replace(/""/g, '"')) : [];
+          let marks = item.marks ? item.marks : [];
+
+          // If marks are a string, parse them
+          if (typeof marks === 'string') {
+            marks = JSON.parse(marks.replace(/""/g, '"')); // Handle the double-quote issue
+          }
+
           // Filter out the "Result" and "Month & Year" subcodes in the marks array
           const filteredMarks = marks.filter(mark => mark.subcode !== "Result" && mark.subcode !== "Month & Year");
+          
           return {
             ...item,
             marks: filteredMarks,
