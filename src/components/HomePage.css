@@ -11,7 +11,7 @@ body {
   background: linear-gradient(45deg, #2549ac, #3b82f6); /* Deep blue gradient */
   color:  #FFD700;
   text-align: center;
-  padding: 50px 20px;
+  padding: 25px 10px;
 }
 
 .hero h1 {
@@ -22,7 +22,7 @@ body {
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 10px;
   color:#e7e2e2; /* Light blue text for better contrast */
 }
@@ -32,7 +32,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 50px;
-  padding: 60px 20px;
+  padding: 30px 10px;
   background-color: #ffffff; /* White background for the cards */
   text-align: center;
   border-radius: 10px;
@@ -119,9 +119,31 @@ body {
   .vision-mission {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
+    width:100%;
+    padding:0%;
   }
-
+  .hero h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+    color:#FFD700;
+  }
+  .vision, .mission {
+    background-color:#e0f2fe ; /* Light grey background for the cards */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  .hero {
+    background: linear-gradient(45deg, #2549ac, #3b82f6); /* Deep blue gradient */
+    color:  #FFD700;
+    text-align: center;
+    padding: 50px 20px;
+  }
   .course-list {
     flex-direction: column;
     gap: 30px;
