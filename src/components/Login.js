@@ -24,6 +24,9 @@ const LoginForm = () => {
       alert('Login successful: ' + response.data.message);
       // Store the JWT token in localStorage or cookies
       localStorage.setItem('token', response.data.token);
+      setTimeout(() => {
+        localStorage.removeItem('token');
+      }, 3600000);
       setError('');
     } catch (err) {
       setError('Invalid credentials');
