@@ -8,7 +8,7 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="hero">
         <h1>Welcome to Our College</h1>
-        <p>Loyola Polytechnic College(YSRR).</p>
+        
       </section>
 
       {/* Vision and Mission Section */}
