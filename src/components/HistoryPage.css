@@ -1,31 +1,73 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 20px;
+}
+
 .history-container {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #f4f4f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #b49a06;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* Section Headings */
+h2 {
+  color: #005f8d;
+  font-size: 1.8em;
+  margin-top: 30px;
+  border-bottom: 2px solid #005f8d;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* Paragraph Styling */
+p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+  text-indent: 30px; /* Adds indentation for the first line */
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .history-container {
+    padding: 15px;
   }
-  
+
   h1 {
-    text-align: center;
-    font-size: 2rem;
-    color: #000dff;
+    font-size: 1.8em;
   }
-  
-  section {
-    margin-bottom: 30px;
-  }
-  
+
   h2 {
-    font-size: 1.5rem;
-    color: #0036e6;
-    margin-bottom: 10px;
+    font-size: 1.5em;
   }
-  
+
   p {
-    font-size: 1rem;
-    color: #333;
+    font-size: 1em;
   }
-  
+}

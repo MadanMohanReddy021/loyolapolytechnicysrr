@@ -6,6 +6,11 @@ const HistoryPage = () => {
     <div className="history-container">
       <h1>Loyola Polytechnic College History</h1>
       <section>
+        <h2>College History</h2>
+        <p>
+        This college was founded by Sri. Y.S. Raja Reddy Educational Trust in 1979 and was affiliated to Sri Venkateswara University. Late Chief Minister of Andhra Pradesh Sri. Y. S. Raja Sekhara Reddy (Alumni of Andhra Loyola College, Vijayawada) approached Loyola (Jesuit) Fathers in 1993 to take over the institution. From 1993 to 1998, the college was administered by the Jesuits on an experimental basis. Then they decided to take over the institution.        </p>
+      </section>
+      <section>
         <h2>St. Ignatius of Loyola</h2>
         <p>
           St. Ignatius of Loyola, born in 1491 in Spain, founded the Society of Jesus (Jesuits). After a life-changing injury, he dedicated himself to Christ's teachings and founded the Society to promote education, spirituality, and service to humanity.
@@ -32,11 +37,7 @@ To achieve this objective, he set himself in right earnest to study from grammar
         Jesuits are the members of the Society of Jesus world wide organization of religious men, numbering above 20,000 spread all over the world, of whom over 3000 are working in 20 Provinces of india. In Andhra Pradesh alone there are about 200 Jesuits working in schools and colleges, youth services and social work centres, in parishes and in mission out reach programmes, and in almost every form of service to humankind.        </p>
       </section>
 
-      <section>
-        <h2>College History</h2>
-        <p>
-        This college was founded by Sri. Y.S. Raja Reddy Educational Trust in 1979 and was affiliated to Sri Venkateswara University. Late Chief Minister of Andhra Pradesh Sri. Y. S. Raja Sekhara Reddy (Alumni of Andhra Loyola College, Vijayawada) approached Loyola (Jesuit) Fathers in 1993 to take over the institution. From 1993 to 1998, the college was administered by the Jesuits on an experimental basis. Then they decided to take over the institution.        </p>
-      </section>
+     
     </div>
   );
 };

@@ -1,35 +1,32 @@
 import React from 'react';
 import './HomePage.css';
+import { FaBook, FaLightbulb, FaCogs, FaDesktop } from 'react-icons/fa'; // Importing icons
 
 const HomePage = () => {
   return (
     <div>
       {/* Hero Section */}
-    
+      <section className="hero">
+        <h1>Welcome to Our College</h1>
+        <p>Loyola Polytechnic College(YSRR).</p>
+      </section>
 
-      {/* About Section */}
-      <section className="about">
-        <h2>History Of Our College</h2>
-        <p>
-          This college was founded by Sri. Y.S. Raja Reddy Educational Trust in 1979 and was affiliated to Sri Venkateswara University. Late Chief Minister of Andhra Pradesh Sri. Y. S. Raja Sekhara Reddy (Alumni of Andhra Loyola College, Vijayawada) approached Loyola (Jesuit) Fathers in 1993 to take over the institution. From 1993 to 1998, the college was administered by the Jesuits on an experimental basis. Then they decided to take over the institution.
-        </p>
+      {/* Vision and Mission Section */}
+      <section className="vision-mission">
+        <div className="vision">
+          <FaLightbulb size={40} color="#007bff" />
+          <h3>Vision</h3>
+          <p>
+            To produce World-class Engineers for converting global challenges into opportunities through, "Value Embedded Quality Technical Education", and to develop this College as an Academy of Higher Learning in the field of Engineering & Technology.
+          </p>
+        </div>
 
-        <div className="vision-mission">
-          {/* Vision Section */}
-          <div className="vision">
-            <h3>Our Vision</h3>
-            <p>
-              To produce World-class Engineers for converting global challenges into opportunities through, "Value Embedded Quality Technical Education", and to develop this College as an Academy of Higher Learning in the field of Engineering & Technology.
-            </p>
-          </div>
-
-          {/* Mission Section */}
-          <div className="mission">
-            <h3>Our Mission</h3>
-            <p>
-              To impart Technical education and training to the poor and most backward students of Rayalaseema to develop their holistic Personality and to prepare them for work and life, equipping them to be life-long learners and to contribute to the technological, economic, and social development of India.
-            </p>
-          </div>
+        <div className="mission">
+          <FaCogs size={40} color="#007bff" />
+          <h3>Mission</h3>
+          <p>
+            To impart Technical education and training to the poor and most backward students of Rayalaseema to develop their holistic Personality and to prepare them for work and life, equipping them to be life-long learners and to contribute to the technological, economic, and social development of India.
+          </p>
         </div>
       </section>
 
@@ -39,6 +36,7 @@ const HomePage = () => {
 
         <div className="course-list">
           <div className="course-item">
+            <FaBook size={40} color="#007bff" />
             <h3>Diploma Courses</h3>
             <ul>
               <li>Diploma in Computer Engg.</li>

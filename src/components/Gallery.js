@@ -10,7 +10,7 @@ const Gallery = () => {
 
     const fetchImages = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/images');
+        const response = await axios.get('https://backend-upqj.onrender.com/api/images');
         setImages(response.data);
         setLoading(false);
       } catch (error) {

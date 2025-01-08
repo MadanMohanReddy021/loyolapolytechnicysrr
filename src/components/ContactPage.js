@@ -39,7 +39,7 @@ const ContactPage = () => {
           </p>
         </div>
         <div className="contact-item">
-          <h2>Follow us on Instragram for lateset updates</h2>
+          <h2>Follow us on Instragram for latest updates</h2>
           <p>
             <a href="https://www.instagram.com/loyola_polytechnic_plvd?igsh=MXByb2V0bXB4bHg1MQ==" target="_blank" rel="noopener noreferrer">
               @loyola__polytechnic_plvd

@@ -1,67 +1,133 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Light grey background for the entire page */
+}
 
-  .hero {
-    background-color: #000dff;
-    color: white;
-    text-align: center;
-    padding: 50px 0;
-  }
-  
-  .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-  
-  .hero-content p {
-    font-size: 1.5rem;
-  }
-  
-  .about {
-    padding: 30px;
-    background-color: #f4f4f974;
-  }
-  
-  .about h2 {
-    font-size: 2rem;
-    color: #0036e6;
-  }
-  
+/* Hero Section */
+.hero {
+  background: linear-gradient(45deg, #2549ac, #3b82f6); /* Deep blue gradient */
+  color:  #FFD700;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  font-weight: bold;
+  color:#FFD700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color:#e7e2e2; /* Light blue text for better contrast */
+}
+
+/* Vision and Mission Section */
+.vision-mission {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 60px 20px;
+  background-color: #ffffff; /* White background for the cards */
+  text-align: center;
+  border-radius: 10px;
+}
+
+.vision, .mission {
+  background-color:#e0f2fe ; /* Light grey background for the cards */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.vision:hover, .mission:hover {
+  transform: scale(1.05);
+  background-color: #f3f4f6;
+}
+
+.vision h3, .mission h3 {
+  color: #FFA500  ; /* Deep blue text */
+  font-size: 1.6rem;
+}
+
+.vision p, .mission p {
+  font-size: 1rem;
+  color: #4b5563; /* Dark grey text for readability */
+}
+
+/* Courses Section */
+.courses {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.courses h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1e3a8a; /* Deep blue heading */
+}
+
+.course-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.course-item {
+  background-color: #e0f2fe ; /* Light grey background for the courses */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-item:hover {
+  transform: scale(1.05);
+  background-color:#f8f9fa; /* Light blue background on hover */
+}
+
+.course-item h3 {
+  font-size: 1.5rem;
+  color:  #FFA500 ;
+}
+
+.course-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.course-item ul li {
+  font-size: 1rem;
+  color: #374151; /* Dark grey for course text */
+  margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
   .vision-mission {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
-  
-  .vision, .mission {
-    width: 45%;
-  }
-  
-  .vision h3, .mission h3 {
-    font-size: 1.5rem;
-    color: #0036e6;
-  }
-  
-  .courses {
-    background-color: #ffffff5e;
-    padding: 30px;
-  }
-  
-  .courses h2 {
-    font-size: 2rem;
-    text-align: center;
-    color: #0036e6;
-  }
-  
+
   .course-list {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
   }
-  
-  .course-item ul {
-    list-style-type: none;
-    padding: 0;
+
+  .course-item {
+    width: 100%;
   }
-  
-  .course-item li {
-    margin: 10px 0;
-  }
-  
+}

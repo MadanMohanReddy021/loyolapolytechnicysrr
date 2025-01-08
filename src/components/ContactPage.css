@@ -1,49 +1,134 @@
 /* General container for contact page */
 .contact-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;/* General Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+  }
+  
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   
   h1 {
     text-align: center;
-    color: #333;
-    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 30px;
+    font-size: 2.2em;
   }
   
+  /* Contact Details Container */
   .contact-details {
-    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   
   .contact-item {
-    margin-bottom: 25px;
+    flex: 1 1 45%;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
   
   .contact-item h2 {
-    font-size: 1.5rem;
-    color: #000dff;
+    color: #005f8d;
+    font-size: 1.6em;
     margin-bottom: 10px;
+    border-bottom: 2px solid #005f8d;
+    padding-bottom: 5px;
   }
   
   .contact-item p {
-    font-size: 1rem;
-    color: #333;
+    font-size: 1.1em;
+    line-height: 1.6;
   }
   
-  .contact-item a {
-    color: #000dff;
+  a {
+    color: #005f8d;
     text-decoration: none;
   }
   
-  .contact-item a:hover {
+  a:hover {
     text-decoration: underline;
   }
   
-  .contact-item a:active {
-    color: #0036e6;
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-item {
+      flex: 1 1 100%;
+    }
+  
+    h1 {
+      font-size: 1.8em;
+    }
+  
+    .contact-item h2 {
+      font-size: 1.4em;
+    }
+  
+    p, a {
+      font-size: 1em;
+    }
   }
   
+  font-size: 2rem;
+}
+
+.contact-details {
+  margin-top: 30px;
+}
+
+.contact-item {
+  margin-bottom: 25px;
+}
+
+.contact-item h2 {
+  font-size: 1.5rem;
+  color: #000dff;
+  margin-bottom: 10px;
+}
+
+.contact-item p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-item a {
+  color: #000dff;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.contact-item a:active {
+  color: #0036e6;
+}

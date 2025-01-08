@@ -1,0 +1,87 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  h1 {
+    text-align: center;
+    color: #b49a06;
+    margin-bottom: 20px;
+  }
+  
+  /* Section Headings */
+  h2 {
+    color: #005f8d;
+    margin-top: 30px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #005f8d;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Paragraph and List Styles */
+  p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    margin-left: 20px;
+    list-style-type: disc;
+  }
+  
+  li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+  strong {
+    font-weight: bold;
+    color: #003366;
+  }
+  
+  /* Section Styling */
+  section {
+    margin-bottom: 30px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 1.8em;
+    }
+  
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    p, li {
+      font-size: 1em;
+    }
+  }
+  
