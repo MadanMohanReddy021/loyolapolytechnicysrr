@@ -25,7 +25,6 @@ const Admin = () => {
       <div style={{ alignContent: 'center' }} ><ul className="nav nav-tabs">
       {(token&&  <li className="nav-item active"> <button className="btn btn-outline-info btn-lg"    onClick={() => handleComponentChange('notifications')}>Manage Notifications</button></li>)}
       {(token&& <li className="nav-item">  <button className="btn btn-outline-info btn-lg"    onClick={() => handleComponentChange('gallery')}>Add Photos to  Gallery</button></li>)}
-      {(token&& <li className="nav-item">  <button className="btn btn-outline-info btn-lg"    onClick={() => handleComponentChange('fetchmarks')}>fetch the marks</button></li>)}
 
         </ul></div>
 
@@ -33,7 +32,7 @@ const Admin = () => {
       {(token && selectedComponent === 'notifications' )&& <div > <Activenotifications /><Addnotice />
         </div>}
       { (token &&selectedComponent === 'gallery' )&& <Uploadimages />}
-      { (token &&selectedComponent === 'fetchmarks' )&& <FetchMarks />}
+
       {(!token)&& <Login />}
     </div>
   );
