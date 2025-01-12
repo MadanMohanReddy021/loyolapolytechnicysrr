@@ -38,7 +38,8 @@ const DataTable = () => {
 
   return (
     <div>
-      <h1>Data Table</h1>
+      <h1>MARKS OF THE STUDENTS</h1>
+    <h3>Marks are fetched by developer and uploaded to the website by using the concept webscraping</h3>
       <table border="1">
         <thead>
           <tr>
