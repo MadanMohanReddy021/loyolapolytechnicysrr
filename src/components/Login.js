@@ -21,7 +21,7 @@ const LoginForm = () => {
         password,
       });
 
-      alert('Login successful: ' + response.data.message);
+      alert('Login successful: Pleae refresh the page to continue in the admin dashboard  ');
       // Store the JWT token in localStorage or cookies
       localStorage.setItem('token', response.data.token);
       setTimeout(() => {
