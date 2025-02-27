@@ -2,7 +2,8 @@ import React from 'react';
 import './Sidebar.css'; 
 import Courses from './Courses.js';
 import Gallery from './Gallery.js' ;
-import ContactPage from './ContactPage.js';
+import Admission from './Admission.js';
+
 import HistoryPage from './HistoryPage.js';
 import HomePage from './HomePage.js';
 import Facilities from './Facilities.js';
@@ -17,8 +18,8 @@ function MainContent({selectedMenu}) {
         return(<Courses />);
         case 'gallery':
         return(<Gallery />);
-        case 'contact':
-          return(<ContactPage />);
+        case 'Admission':
+          return(<Admission />);
           case 'about':
           return(<HistoryPage />);
           case 'admin':

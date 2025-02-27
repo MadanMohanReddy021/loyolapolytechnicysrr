@@ -30,7 +30,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className='develop'> <span>Designed & developed and hosted by Madan,Rakesh,Nanda,Hemesh from Loyola Polytechnic(YSRR)</span></div>
+      <div className='develop'> <span>Designed, developed, and hosted by Madan, Rakesh, Nanda, and Hemesh under the mentorship of Mr. L. Ashok Kumar Reddy from Loyola Polytechnic(YSRR)</span></div>
     </footer>
   );
 }
