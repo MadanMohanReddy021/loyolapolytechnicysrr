@@ -10,15 +10,22 @@ import book from './book.svg';
 import telephone from './telephone.svg';
 import person from './person.svg';
 import bank from './bank.svg';
-
+import { FaBars } from "react-icons/fa"
 import 'bootstrap/dist/css/bootstrap.min.css';
 function Header() {
   
   const [selectedMenu, setSelectedMenu] = useState('home');
+  const [isNavActive, setIsNavActive] = useState(false);
 
   const handleMenuClick = (menu) => {
     setSelectedMenu(menu);
-    
+    // Optionally close the nav after a menu item is clicked on mobile
+    if (window.innerWidth <= 768) {
+        setIsNavActive(false);
+    }
+  };
+  const toggleNav = () => {
+    setIsNavActive(!isNavActive);
   };
 
   return (
@@ -27,18 +34,18 @@ function Header() {
         <div className="logo">
           <img src={loyImage} alt="Loyola Polytechnic (YSRR)" />
           <p>Loyola Polytechnic (YSRR)</p>
+          <button id="menu" onClick={toggleNav}><FaBars size={20} /></button>
         </div>
-
         {/* Navigation Menu */}
-        <nav>
-          <ul className="nav-list">
-            <li className='nav-item'><a onClick={() => handleMenuClick('home')}><i className="bi bi-house-door-fill"><img src={homeimg}></img> </i>Home</a></li>
-            <li className='nav-item'><a onClick={() => handleMenuClick('course')}> <i className="bi bi-award"><img src={cion} /></i>Courses</a></li>
-            <li className='nav-item'><a onClick={() => handleMenuClick('gallery')}><i className="bi bi-images"><img src={gall} /></i>Gallery</a></li>
-            <li className='nav-item'><a onClick={() => handleMenuClick('contact')}><i className="bi bi-telephone"><img src={telephone} /></i>Contact</a></li>
-            <li className='nav-item'><a onClick={() => handleMenuClick('about')}><i className="bi bi-person"><img src={person} /></i>About Us</a></li>
+        <nav id="navlist">
+          <ul className={`nav-list ${isNavActive ? 'active' : ''}`}>
+            <li className='nav-item'><a onClick={() => handleMenuClick('home')}><i className="bi bi-house-door-fill"><img src={homeimg} alt="home"/> </i>Home</a></li>
+            <li className='nav-item'><a onClick={() => handleMenuClick('course')}> <i className="bi bi-award"><img src={cion} alt="course" /></i>Courses</a></li>
+            <li className='nav-item'><a onClick={() => handleMenuClick('gallery')}><i className="bi bi-images"><img src={gall} alt="gall"/></i>Gallery</a></li>
+            <li className='nav-item'><a onClick={() => handleMenuClick('contact')}><i className="bi bi-telephone"><img src={telephone} alt='telephone'/></i>Contact</a></li>
+            <li className='nav-item'><a onClick={() => handleMenuClick('about')}><i className="bi bi-person"><img src={person} alt="person" /></i>About Us</a></li>
             <li className='nav-item'><a onClick={() => handleMenuClick('marks')} >Marks</a></li>
-            <li className='nav-item'><a onClick={() => handleMenuClick('facilities')}><i className="bi bi-bank"><img src={bank} /></i>Facilities</a></li>
+            <li className='nav-item'><a onClick={() => handleMenuClick('facilities')}><i className="bi bi-bank"><img src={bank} alt="bank"/></i>Facilities</a></li>
             <li className='nav-item'><a onClick={() => handleMenuClick('admin')}>Admin</a></li>
           </ul>
         </nav>

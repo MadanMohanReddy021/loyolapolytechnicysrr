@@ -1,0 +1,72 @@
+.image-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden; /* Hide overflowing images */
+  position: relative;
+  margin-bottom: 20px; /* add space after the slider */
+
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0; /* Prevent images from shrinking */
+  margin: 0 10px;
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 8px;
+}
+.slider-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #333;
+  padding: 10px;
+  margin: 0 5px;
+  z-index: 10;
+  transition: background-color 0.3s; 
+  background-color: rgba(255, 255, 255, 0.7); 
+  border-radius: 50%;
+  display:flex;
+  align-items: center;
+}
+.slider-arrow:hover{
+    background-color: #ccc;
+}
+
+.slider-arrow-left {
+  order: 1;
+}
+
+.slider-arrow-right {
+  order: 3;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .slider-image{
+        margin:0;
+    }
+  .image-slider .slider-container {
+    overflow-x: hidden; /* Hide overflowing images */
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .slider-image {
+        margin: 0 5px; /* Reduce spacing */
+    }
+}
+

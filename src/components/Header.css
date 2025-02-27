@@ -1,4 +1,4 @@
-/* Header Styling */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -6,8 +6,8 @@ header {
   background-color: #046bd1;
   padding: 10px 20px;
   color: white;
-  position:sticky;
-  top:0px;
+  position: sticky;
+  top: 0px;
   z-index: 5;
 }
 
@@ -17,14 +17,14 @@ header .logo {
 }
 
 header .logo img {
-  height: 50px; /* Adjust the size of the logo */
+  height: 50px;
   margin-right: 10px;
 }
 
 header .logo p {
   font-size: 1.5rem;
   margin: 0;
-  color:#ffe81e
+  color: #ffea28;
 }
 
 header nav {
@@ -37,7 +37,6 @@ header .nav-list {
   list-style: none;
 }
 
-/* Style for Navigation Links */
 header .nav-list li {
   margin-left: 20px;
   position: relative;
@@ -47,15 +46,17 @@ header .nav-list a {
   color: white;
   text-decoration: none;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+header .nav-list a img {
+  margin-right: 5px;
+  height: 20px;
+  width:20px;
 }
 
 header .nav-list a:hover {
-  color: #ffcc00; /* Highlight color */
-}
-
-/* Dropdown Menu Styling */
-header .nav-list li:hover .dropdown {
-  display: block;
+  color: #ffcc00;
 }
 
 header .dropdown {
@@ -79,90 +80,69 @@ header .dropdown a {
 }
 
 header .dropdown a:hover {
-  color: #ffcc00; /* Highlight color */
+  color: #ffcc00;
 }
-a:hover 
-{
+
+a:hover {
   cursor: pointer;
 }
-/* Responsive Design */
+
+#menu {
+  visibility: hidden;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+
+}
+/* Responsive Design - Initial adjustments for smaller screens */
 @media screen and (max-width: 768px) {
-  /* Stack the logo and nav vertically on small screens */
   header {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    position: static;
   }
 
-  /* Logo size adjustment */
   header .logo img {
-      height: 40px; /* Adjust logo size on smaller screens */
+    height: 40px;
   }
 
-  /* Show nav links and make them stacked on smaller screens */
   header .nav-list {
-      flex-direction: column;
-      width: 100%;
-      padding-top: 10px;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+    display: none;/*hide initially*/
+  }
+  header .nav-list.active{
+    display:flex;/*show when active class added*/
   }
 
   header .nav-list li {
-      margin: 10px 0;
-      text-align: center;
+    margin: 10px 0;
+    text-align: center;
   }
-
-  /* Dropdown - force dropdown to be full width on mobile */
+  header .logo{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  #menu{
+    visibility:visible;
+  }
   header .dropdown {
-      width: 100%;
+    width: 100%;
   }
 }
-
-/* Media query for screens between 480px and 460px */
-@media screen and (max-width: 480px) and (min-width: 460px) {
-  /* Grid or table-style layout for the nav list */
-  header .nav-list {
-      display: grid;
-      grid-template-columns: max-content;
-      gap: 10px;
-      padding: 0;
-      width: 100%;
-  }
-
-  header .nav-list li {
-      margin: 0;
-      text-align: center;
-  }
-
-  header .nav-list a {
-      font-size: 1rem; /* Adjust font size for better readability */
-  }
-}
-
-/* For very small screens like mobile */
+/* Responsive Design - For very small screens*/
 @media screen and (max-width: 480px) {
-  /* Make logo text smaller on very small screens */
-  header .logo p {
-      font-size: 1.2rem;
-  }
-header
-{
-  position:static;
-}
-  /* Grid or table-style layout for the nav list */
-  header .nav-list {
-      display: grid;
-      grid-template-columns: 1fr; /* Single column for nav items on small screens */
-      gap: 10px;
-      padding: 0;
-      width: 100%;
-  }
-
-  header .nav-list li {
-      margin: 0;
-      text-align: center;
-  }
-
-  header .nav-list a {
-      font-size: 1rem; /* Adjust font size for better readability */
-  }
+    header .logo p {
+        font-size: 1.2rem;
+    }
+    
+    header .nav-list {
+        grid-template-columns: 1fr; 
+    }
 }

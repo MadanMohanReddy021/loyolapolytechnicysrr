@@ -1,14 +1,14 @@
 import React from 'react';
 import './HomePage.css';
-import { FaBook, FaLightbulb, FaCogs, FaDesktop } from 'react-icons/fa'; // Importing icons
+import { FaLightbulb, FaCogs } from 'react-icons/fa';
+import ImageSlider from './ImageSlider'; // Import the ImageSlider component
 
 const HomePage = () => {
   return (
-    <div>
-      {/* Hero Section */}
+    <div className='homepage'>
+      {/* Image Slider */}
       <section className="hero">
-        <h1>Welcome to Our College</h1>
-        
+        <ImageSlider /> {/* Render the ImageSlider component here */}
       </section>
 
       {/* Vision and Mission Section */}
@@ -36,7 +36,7 @@ const HomePage = () => {
 
         <div className="course-list">
           <div className="course-item">
-            <FaBook size={40} color="#007bff" />
+           
             <h3>Diploma Courses</h3>
             <ul>
               <li>Diploma in Computer Engg.</li>

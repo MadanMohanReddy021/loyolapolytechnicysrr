@@ -1,155 +1,125 @@
-/* General styles */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9; /* Light grey background for the entire page */
+/* General styles for the HomePage */
+.homepage {
+  padding: 20px;
 }
 
-/* Hero Section */
+/* Hero Section Styles */
 .hero {
-  background: linear-gradient(45deg, #2549ac, #3b82f6); /* Deep blue gradient */
-  color:  #FFD700;
-  text-align: center;
-  padding: 25px 10px;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .hero h1 {
-  font-size: 3.5rem;
-  margin: 0;
-  font-weight: bold;
-  color:#FFD700;
+  text-align: center;
+  margin-bottom: 20px;
 }
-
-.hero p {
-  font-size: 1rem;
-  margin-top: 10px;
-  color:#e7e2e2; /* Light blue text for better contrast */
+.slider-img{
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-/* Vision and Mission Section */
+.slider-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slick-dots li.slick-active button:before {
+  color: #046bd1; 
+  font-size: 12px;
+}
+.slick-dots li button:before {
+  color: #333;
+  font-size: 10px;
+}
+/* Vision and Mission Section Styles */
 .vision-mission {
   display: flex;
-  justify-content: center;
-  gap: 50px;
-  padding: 30px 10px;
-  background-color: #ffffff; /* White background for the cards */
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.vision,
+.mission {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   text-align: center;
-  border-radius: 10px;
 }
 
-.vision, .mission {
-  background-color:#e0f2fe ; /* Light grey background for the cards */
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 45%;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
+.vision h3,
+.mission h3 {
+  margin-top: 10px;
+  color: #007bff;
 }
 
-.vision:hover, .mission:hover {
-  transform: scale(1.05);
-  background-color: #f3f4f6;
+.vision p,
+.mission p {
+  line-height: 1.6;
 }
 
-.vision h3, .mission h3 {
-  color: #FFA500  ; /* Deep blue text */
-  font-size: 1.6rem;
-}
-
-.vision p, .mission p {
-  font-size: 1rem;
-  color: #4b5563; /* Dark grey text for readability */
-}
-
-/* Courses Section */
+/* Courses Section Styles */
 .courses {
-  background-color: #ffffff;
-  padding: 60px 20px;
   text-align: center;
-  border-radius: 10px;
 }
 
 .courses h2 {
-  font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #1e3a8a; /* Deep blue heading */
 }
 
 .course-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
 }
 
 .course-item {
-  background-color: #e0f2fe ; /* Light grey background for the courses */
+  flex: 1;
+  min-width: 300px;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.course-item:hover {
-  transform: scale(1.05);
-  background-color:#f8f9fa; /* Light blue background on hover */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: left;
 }
 
 .course-item h3 {
-  font-size: 1.5rem;
-  color:  #FFA500 ;
+  margin-top: 10px;
+  color: #007bff;
 }
 
 .course-item ul {
-  list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding-left: 20px;
 }
 
-.course-item ul li {
-  font-size: 1rem;
-  color: #374151; /* Dark grey for course text */
+.course-item li {
   margin-bottom: 5px;
 }
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
+/*Responsive*/
+@media(max-width:768px){
+  .slider-img{
+    height:300px;
+  }
+}
+@media (max-width: 480px) {
   .vision-mission {
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width:100%;
-    padding:0%;
   }
-  .hero h1 {
-    font-size: 2rem;
-    margin: 0;
-    font-weight: bold;
-    color:#FFD700;
-  }
-  .vision, .mission {
-    background-color:#e0f2fe ; /* Light grey background for the cards */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 95%;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-  }
-  .hero {
-    background: linear-gradient(45deg, #2549ac, #3b82f6); /* Deep blue gradient */
-    color:  #FFD700;
-    text-align: center;
-    padding: 50px 20px;
-  }
-  .course-list {
-    flex-direction: column;
-    gap: 30px;
+
+  .vision,
+  .mission {
+    min-width: 100%;
   }
 
   .course-item {
-    width: 100%;
+    min-width: 100%;
+  }
+  .slider-img{
+    height:200px;
   }
 }
