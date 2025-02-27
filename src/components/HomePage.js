@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomePage.css';
 import { FaLightbulb, FaCogs } from 'react-icons/fa';
-import ImageSlider from './ImageSlider'; // Import the ImageSlider component
+import ImageSlider from './ImageSlider.js'; // Import the ImageSlider component
 
 const HomePage = () => {
   return (
