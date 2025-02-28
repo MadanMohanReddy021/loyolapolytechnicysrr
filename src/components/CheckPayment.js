@@ -12,8 +12,8 @@ const CheckPayment = () => {
     try {
       const response = await fetch("https://backend-upqj.onrender.com/api/payments");
       const data = await response.json();
-      setPayments(data); // Update state
-      console.log("Fetched Payments:", data); // Log received data
+      setPayments(data); //  
+   // Log  data
     } catch (error) {
       console.error("Error fetching payments:", error);
     }

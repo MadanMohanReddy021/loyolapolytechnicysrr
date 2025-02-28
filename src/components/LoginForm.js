@@ -25,7 +25,7 @@ const LoginForm = () => {
         password,
       });
 
-      alert('Login successful: ' + response.data.message);
+      alert('Login successful: Please refresh the page to continue. ' + response.data.message);
       localStorage.setItem('hallTicket', hallTicket);
       localStorage.setItem('loyolaToken', response.data.loyolaToken); // Changed "token" to "loyolaToken"
       // Optionally, set a timeout to remove the token after a certain period

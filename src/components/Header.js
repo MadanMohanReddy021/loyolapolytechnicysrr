@@ -12,6 +12,8 @@ import person from './person.svg';
 import bank from './bank.svg';
 import { FaBars } from "react-icons/fa"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {  FaBookOpen } from "react-icons/fa";
+import { FaClipboardList } from "react-icons/fa";
 function Header() {
   
   const [selectedMenu, setSelectedMenu] = useState('home');
@@ -42,9 +44,9 @@ function Header() {
             <li className='nav-item'><a onClick={() => handleMenuClick('home')}><i className="bi bi-house-door-fill"><img src={homeimg} alt="home"/> </i>Home</a></li>
             <li className='nav-item'><a onClick={() => handleMenuClick('course')}> <i className="bi bi-award"><img src={cion} alt="course" /></i>Courses</a></li>
             <li className='nav-item'><a onClick={() => handleMenuClick('gallery')}><i className="bi bi-images"><img src={gall} alt="gall"/></i>Gallery</a></li>
-            <li className='nav-item'><a onClick={() => handleMenuClick('Admission')}>Admissions</a></li>
+            <li className='nav-item'><a onClick={() => handleMenuClick('Admission')}><FaBookOpen size={20} color="black"/>   Admissions</a></li>
             <li className='nav-item'><a onClick={() => handleMenuClick('about')}><i className="bi bi-person"><img src={person} alt="person" /></i>About Us</a></li>
-            <li className='nav-item'><a onClick={() => handleMenuClick('marks')} >Marks</a></li>
+            <li className='nav-item'><a onClick={() => handleMenuClick('marks')} ><FaClipboardList size={20} color="black" />    Marks</a></li>
             <li className='nav-item'><a onClick={() => handleMenuClick('facilities')}><i className="bi bi-bank"><img src={bank} alt="bank"/></i>Facilities</a></li>
             <li className='nav-item'><a onClick={() => handleMenuClick('admin')}>Admin</a></li>
           </ul>
