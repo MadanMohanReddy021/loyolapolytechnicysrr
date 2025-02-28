@@ -21,11 +21,11 @@ const Admission = () => {
   return (
     <div className="Admin">
       <h1>Admissions</h1>
-
+       <h4>70% seats are filled by the government and remaining 30% seats are filled by the college managment through this method</h4>
       
       <div style={{ alignContent: 'center' }} ><ul className="nav nav-tabs">
       {((!loyolatoken)&&  <li className="nav-item active"> <button className="btn btn-outline-info btn-lg"    onClick={() => handleComponentChange('Login')}>Login</button></li>)}
-      {((!loyolatoken)&& <li className="nav-item">  <button className="btn btn-outline-info btn-lg"    onClick={() => handleComponentChange('Sinup')}>Sinup</button></li>)}
+      {((!loyolatoken)&& <li className="nav-item">  <button className="btn btn-outline-info btn-lg"    onClick={() => handleComponentChange('Sinup')}>Signup</button></li>)}
       {(loyolatoken&&  <li className="nav-item active"> <button className="btn btn-outline-info btn-lg"    onClick={() => handleComponentChange('Payment')}>Pay Fee</button></li>)}
       {(loyolatoken&&  <li className="nav-item active"> <button className="btn btn-outline-info btn-lg"    onClick={() => handleComponentChange('Apply')}>Apply</button></li>)}
         
