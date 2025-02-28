@@ -64,9 +64,9 @@ const CheckPayment = () => {
               <tbody>
                 {payments.length > 0 ? (
                   payments.map((payment) => (
-                    <tr key={payment.hallTicket}>
-                      <td>{payment.hallTicket}</td>
-                      <td>{payment.transactionId}</td>
+                    <tr key={payment.hallticket}>
+                      <td>{payment.hallticket}</td>
+                      <td>{payment.transactionid}</td>
                       <td>
                         <button
                           className="btn btn-success btn-sm me-2"
