@@ -2,10 +2,32 @@ import React from 'react';
 import './HomePage.css';
 import { FaLightbulb, FaCogs } from 'react-icons/fa';
 import ImageSlider from './ImageSlider.js'; // Import the ImageSlider component
-
+import "bootstrap/dist/css/bootstrap.min.css";
 const HomePage = () => {
   return (
+
+
     <div className='homepage'>
+          <div className="container mt-4">
+    <div className="row justify-content-center align-items-center">
+      <div className="col-6 text-center"><p className="mt-2">Accredited By</p>
+        <img
+          src="images/NBA.png"
+          alt="Image 1"
+          className="img-fluid rounded float-start"
+        />
+        
+      </div>
+      <div className="col-6 text-center"><p className="mt-2">Approved By</p>
+        <img
+          src="images/aicte.jpeg"
+          alt="Image 2"
+          className="img-fluid rounded float-start"
+        />
+        
+      </div>
+    </div>
+  </div>
       {/* Image Slider */}
       <section className="hero">
         <ImageSlider /> {/* Render the ImageSlider component here */}
