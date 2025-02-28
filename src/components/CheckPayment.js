@@ -12,13 +12,13 @@ const CheckPayment = () => {
     try {
       const response = await fetch("https://backend-upqj.onrender.com/api/payments");
       const data = await response.json();
-      setPayments(data);
-      console.log(payments);
+      setPayments(data); // Update state
+      console.log("Fetched Payments:", data); // Log received data
     } catch (error) {
       console.error("Error fetching payments:", error);
     }
   };
-
+  
   const handleDelete = async (hallTicket) => {
     try {
       await fetch(`https://backend-upqj.onrender.com/api/payments/${hallTicket}`, {
