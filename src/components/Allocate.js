@@ -5,7 +5,7 @@ const Allocate = () => {
 
   const handleAllocate = async () => {
     try {
-      const response = await fetch("http://backend-upqj.onrender.com/api/allocate");
+      const response = await fetch("https://backend-upqj.onrender.com/api/allocate");
       const data = await response.json();
       setMessage(data.message);
     } catch (error) {
