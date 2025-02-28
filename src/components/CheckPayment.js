@@ -10,7 +10,7 @@ const CheckPayment = () => {
 
   const fetchPayments = async () => {
     try {
-      const response = await fetch("http://backend-upqj.onrender.com/api/payments");
+      const response = await fetch("https://backend-upqj.onrender.com/api/payments");
       const data = await response.json();
       setPayments(data);
     } catch (error) {
@@ -20,7 +20,7 @@ const CheckPayment = () => {
 
   const handleDelete = async (hallTicket) => {
     try {
-      await fetch(`http://backend-upqj.onrender.com/api/payments/${hallTicket}`, {
+      await fetch(`https://backend-upqj.onrender.com/api/payments/${hallTicket}`, {
         method: "DELETE",
       });
       setPayments(payments.filter((payment) => payment.hallTicket !== hallTicket));
@@ -31,7 +31,7 @@ const CheckPayment = () => {
 
   const handleAccept = async (hallTicket) => {
     try {
-      await fetch("http://backend-upqj.onrender.com/api/confirmPayment", {
+      await fetch("https://backend-upqj.onrender.com/api/confirmPayment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
