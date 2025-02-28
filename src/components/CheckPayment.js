@@ -13,6 +13,7 @@ const CheckPayment = () => {
       const response = await fetch("https://backend-upqj.onrender.com/api/payments");
       const data = await response.json();
       setPayments(data);
+      console.log(payments);
     } catch (error) {
       console.error("Error fetching payments:", error);
     }
