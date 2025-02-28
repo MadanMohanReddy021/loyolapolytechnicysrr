@@ -24,7 +24,7 @@ const CheckPayment = () => {
       await fetch(`https://backend-upqj.onrender.com/api/payments/${hallTicket}`, {
         method: "DELETE",
       });
-      setPayments(payments.filter((payment) => payment.hallTicket !== hallTicket));
+      setPayments(payments.filter((payment) => payment.hallticket !== hallTicket));
     } catch (error) {
       console.error("Error deleting payment:", error);
     }
@@ -39,7 +39,7 @@ const CheckPayment = () => {
         },
         body: JSON.stringify({ hallTicket }),
       });
-      setPayments(payments.filter((payment) => payment.hallTicket !== hallTicket));
+      setPayments(payments.filter((payment) => payment.hallticket !== hallTicket));
     } catch (error) {
       console.error("Error accepting payment:", error);
     }
@@ -70,13 +70,13 @@ const CheckPayment = () => {
                       <td>
                         <button
                           className="btn btn-success btn-sm me-2"
-                          onClick={() => handleAccept(payment.hallTicket)}
+                          onClick={() => handleAccept(payment.hallticket)}
                         >
                           Accept
                         </button>
                         <button
                           className="btn btn-danger btn-sm"
-                          onClick={() => handleDelete(payment.hallTicket)}
+                          onClick={() => handleDelete(payment.hallticket)}
                         >
                           Delete
                         </button>
