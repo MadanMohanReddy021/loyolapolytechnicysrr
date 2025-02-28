@@ -20,7 +20,7 @@ const LoginForm = () => {
 
     try {
       // Send login request to the backend
-      const response = await axios.post('https://backend-upqj.onrender.com/api/candidate-login', {
+      const response = await axios.post('https://backend-upqj.onrender.com/api/candidates-login', {
         username: hallTicket, // Send hallTicket as username
         password,
       });
